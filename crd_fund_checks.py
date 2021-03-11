@@ -2,15 +2,16 @@
 """
 CRD Fund Check
 Developed by: Alex Skotnicki
-Version 1.2
+Version 2.0
 Created: 18/01/2021
 Last Edited: 12/03/2021
+Edits: Split class functionality into TransformCRD and CompareCRD
 """
 #Import relevant packages
 import numpy as np
 import pandas as pd
 
-class CompareCRD:
+class TransformCRD:
     
     """Object to transform loaded data, and compare the changes in fund lists between two sets of Charles River 
     Holdings Data"""
@@ -53,6 +54,8 @@ class CompareCRD:
         
         return units
 
+class CompareCRD(TransformCRD):
+    
     def new_funds(self):
         new_funds = []
         
